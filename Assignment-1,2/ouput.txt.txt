@@ -1,0 +1,86 @@
+$ python3 process_management.py --task1 3
+--- Running Task 1: Creating 3 Child Processes ---
+Parent Process PID: 23145
+Parent: Created child with PID: 23146
+Parent: Created child with PID: 23147
+Parent: Created child with PID: 23148
+  -> Child-1: My PID is 23146, My Parent's PID is 23145.
+Parent: Child 23146 has finished with status 0.
+  -> Child-2: My PID is 23147, My Parent's PID is 23145.
+Parent: Child 23147 has finished with status 0.
+  -> Child-3: My PID is 23148, My Parent's PID is 23145.
+Parent: Child 23148 has finished with status 0.
+Parent: All children have completed.
+
+
+$ python3 process_management.py --task2 "ls -l" date "ps aux"
+--- Running Task 2: Executing Commands ---
+Parent Process PID: 23155
+
+Child 23156: Executing 'ls -l'...
+-rw-r--r-- 1 user user 2340 Oct  6 23:11 process_log.txt
+-rwxr-xr-x 1 user user 6808 Oct  6 23:10 process_management.py
+... (other files)
+
+Child 23157: Executing 'date'...
+Mon Oct  6 23:11:36 IST 2025
+
+Child 23158: Executing 'ps aux'...
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+user     23155  0.0  0.1  123456  1234 pts/0  S    23:11   0:00 python3 process_management.py --task2 ls -l date ps aux
+user     23158  0.0  0.0  56789   456 pts/0  S    23:11   0:00 ps aux
+
+Parent: All commands executed by children.
+
+
+$ python3 process_management.py --zombie
+--- Task 3: Zombie and Orphan Demo ---
+Parent (23165): I created a child (23166) which will exit immediately.
+Parent: Sleeping 5 seconds before checking zombie state...
+Child (23166): Exited, now zombie temporarily.
+>>> Run `ps -el | grep Z` in another terminal to see the zombie.
+
+Parent: Reaped the zombie child. No zombies now.
+
+Parent (23167): Creating an orphan child.
+Child (23168): Sleeping 4 seconds...
+Child (23168): Orphan detected. New PPID=1
+Child (23168): Exiting. Orphan handled by init.
+
+
+$ python3 process_management.py --inspect 23155
+--- Task 4: Inspecting /proc/23155 ---
+
+--- Reading /proc/23155/status ---
+Name:   python3
+State:  S (sleeping)
+Pid:    23155
+PPid:   23100
+VmSize:     45678 kB
+VmRSS:      12345 kB
+Threads:    1
+...
+
+--- Reading /proc/23155/exe ---
+Executable Path: /usr/bin/python3.11
+
+--- Listing /proc/23155/fd ---
+Open File Descriptors:
+  FD 0 -> /dev/pts/0
+  FD 1 -> /dev/pts/0
+  FD 2 -> /dev/pts/0
+  FD 3 -> /home/user/process_log.txt
+
+
+$ python3 process_management.py --priority
+--- Task 5: Priority Demo ---
+Creating 3 CPU-bound child processes with increasing nice values.
+Child (PID 23175, Nice 0): Starting CPU-intensive work.
+Child (PID 23176, Nice 5): Starting CPU-intensive work.
+Child (PID 23177, Nice 10): Starting CPU-intensive work.
+--> Child (PID 23175, Nice 0): FINISHED in 0.42s.
+--> Child (PID 23176, Nice 5): FINISHED in 0.68s.
+--> Child (PID 23177, Nice 10): FINISHED in 0.93s.
+
+Parent: All prioritized children have completed.
+
