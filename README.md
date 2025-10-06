@@ -39,8 +39,8 @@ How to Run
 
 1. Clone the repository
 
-git clone https://github.com/GunjanJ2027/OS_Lab_Assignment-Gunjan-Joshi
-cd OS_Lab_Assignment-Gunjan-Joshi
+git clone https://github.com/Abhinav0791/Operating-System-Lab-Experiment_ENCS351
+cd <repository-folder>
 
 2. Make the script executable
 
