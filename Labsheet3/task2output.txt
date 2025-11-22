@@ -1,0 +1,11 @@
+"D:\CODES\python\Project1(Mad libs)\.venv\Scripts\python.exe" "D:\code college\Labsheet3\Task2.py" 
+Enter total number of blocks: 3
+Enter number of files: 2
+Enter starting block for file 1: 1
+Enter length of file 1: 2
+File 1 allocated from block 1 to 2
+Enter starting block for file 2: 5
+Enter length of file 2: 7
+File 2 cannot be allocated.
+
+Process finished with exit code 0

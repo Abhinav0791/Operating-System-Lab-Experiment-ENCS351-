@@ -1,0 +1,49 @@
+"D:\CODES\python\Project1(Mad libs)\.venv\Scripts\python.exe" "D:\code college\Labsheet3\Labtask5.py"
+
+MFT Simulation:
+
+Enter total memory size: 12
+
+Enter partition size: 2
+
+Enter number of processes: 4
+
+Memory divided into 6 partitions
+
+Enter size of Process 1: 2
+
+Process 1 allocated.
+
+Enter size of Process 2: 3
+
+Process 2 too large for fixed partition.
+
+Enter size of Process 3: 1
+
+Process 3 allocated.
+
+Enter size of Process 4: 2
+
+Process 4 allocated.
+
+MVT Simulation:
+
+Enter total memory size: 12
+
+Enter number of processes: 4
+
+Enter size of Process 1: 1
+
+Process 1 allocated.
+
+Enter size of Process 2: 4
+
+Process 2 allocated.
+
+Enter size of Process 3: 5
+
+Process 3 allocated.
+
+Enter size of Process 4: 2
+
+Process 4 allocated.

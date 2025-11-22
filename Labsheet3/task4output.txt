@@ -1,0 +1,27 @@
+"D:\CODES\python\Project1(Mad libs)\.venv\Scripts\python.exe" "D:\code college\Labsheet3\Labtask4.py" 
+
+First Fit
+
+Enter partition sizes: 6
+
+Enter process sizes: 2
+
+Process 1 allocated in Partition 1
+
+Best Fit
+
+Enter partition sizes: 4
+
+Enter process sizes: 31
+
+Process I allocated in Partition 1
+
+Process 2 allocated in Partition 1
+
+Horst Fit
+
+Enter partition sizes: 7 Enter process sizes: 213
+
+Process 1 allocated in Partition 1
+
+Process 2 allocated in Partition 1 Process 3 allocated in Partition 1

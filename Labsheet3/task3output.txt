@@ -1,0 +1,13 @@
+"D:\CODES\python\Project1(Mad libs)\.venv\Scripts\python.exe" "D:\code college\Labsheet3\Labtask3.py" 
+Enter total number of blocks: 10
+Enter number of files: 2
+Enter index block for file 1: 3
+Enter number of data blocks: 1
+Enter block numbers: 2
+File 1 allocated with index block 3 -> [2]
+Enter index block for file 2: 4
+Enter number of data blocks: 2
+Enter block numbers: 3
+Block(s) already allocated or invalid input.
+
+Process finished with exit code 0
